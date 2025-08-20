@@ -1,0 +1,9 @@
+.grid {
+  display: grid;
+  gap: 1rem;
+}
+@media (min-width: 900px) {
+  .grid { grid-template-columns: 1fr 1fr; }
+}
+.list { display: grid; gap: .5rem; }
+.item { background: rgba(255,255,255,.04); border: 1px solid rgba(255,255,255,.08); padding: .75rem 1rem; border-radius: .75rem; }

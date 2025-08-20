@@ -1,0 +1,33 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --bg: #0b1220;
+  --fg: #e6edf6;
+  --muted: #9aa4b2;
+  --accent: #60a5fa;
+}
+
+html, body {
+  height: 100%;
+  scroll-behavior: smooth;
+  background: var(--bg);
+  color: var(--fg);
+}
+
+.section {
+  @apply py-20 md:py-28;
+}
+
+.heading {
+  @apply text-3xl md:text-4xl font-bold tracking-tight;
+}
+
+.subtle {
+  color: var(--muted);
+}
+
+.card {
+  @apply rounded-2xl p-6 bg-white/5 border border-white/10 hover:border-white/20 transition;
+}

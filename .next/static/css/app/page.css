@@ -1,0 +1,122 @@
+/*!***************************************************************************************************************************************************************************************************************************************************************************!*\
+  !*** css ./node_modules/next/dist/build/webpack/loaders/css-loader/src/index.js??ruleSet[1].rules[14].oneOf[7].use[2]!./node_modules/next/dist/build/webpack/loaders/postcss-loader/src/index.js??ruleSet[1].rules[14].oneOf[7].use[3]!./src/components/About.module.css ***!
+  \***************************************************************************************************************************************************************************************************************************************************************************/
+.About_grid__WEtlt {
+  display: grid;
+  gap: 1rem;
+}
+@media (min-width: 900px) {
+  .About_grid__WEtlt { grid-template-columns: 1fr 1fr; }
+}
+.About_list__ffqiU { display: grid; gap: .5rem; }
+.About_item__SbfVW { background: rgba(255,255,255,.04); border: 1px solid rgba(255,255,255,.08); padding: .75rem 1rem; border-radius: .75rem; }
+
+/*!**************************************************************************************************************************************************************************************************************************************************************************!*\
+  !*** css ./node_modules/next/dist/build/webpack/loaders/css-loader/src/index.js??ruleSet[1].rules[14].oneOf[7].use[2]!./node_modules/next/dist/build/webpack/loaders/postcss-loader/src/index.js??ruleSet[1].rules[14].oneOf[7].use[3]!./src/components/Hero.module.css ***!
+  \**************************************************************************************************************************************************************************************************************************************************************************/
+.Hero_wrapper__PHxif {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1.5rem;
+}
+.Hero_title__Bn2TU {
+  font-size: clamp(2rem, 4vw, 3.5rem);
+  font-weight: 800;
+  line-height: 1.1;
+}
+.Hero_badge__RIQsB {
+  display: inline-flex;
+  gap: .5rem;
+  padding: .35rem .75rem;
+  border-radius: 999px;
+  border: 1px solid rgba(255,255,255,.15);
+  background: rgba(255,255,255,.05);
+}
+.Hero_actions__LI5fP { display: flex; gap: .75rem; flex-wrap: wrap; }
+
+@media (min-width: 900px) {
+  .Hero_wrapper__PHxif {
+    grid-template-columns: 1.2fr .8fr;
+    align-items: center;
+  }
+}
+.Hero_avatar__sMnBS {
+  border-radius: 1rem;
+  border: 1px solid rgba(255,255,255,.15);
+  box-shadow: 0 10px 40px rgba(0,0,0,.35);
+}
+
+/*!*********************************************************************************************************************************************************************************************************************************************************************!*\
+  !*** css ./node_modules/next/dist/build/webpack/loaders/css-loader/src/index.js??ruleSet[1].rules[14].oneOf[7].use[2]!./node_modules/next/dist/build/webpack/loaders/postcss-loader/src/index.js??ruleSet[1].rules[14].oneOf[7].use[3]!./src/styles/Nav.module.css ***!
+  \*********************************************************************************************************************************************************************************************************************************************************************/
+.Nav_header__4LUU_ {
+  position: sticky;
+  top: 0;
+  z-index: 50;
+  backdrop-filter: saturate(180%) blur(10px);
+  background: rgba(11,18,32,0.6);
+  border-bottom: 1px solid rgba(255,255,255,0.08);
+  padding: 0.75rem 0;
+}
+
+.Nav_nav__WsUm6 {
+  display: none;
+  gap: 1rem;
+}
+.Nav_link__ssiPN {
+  color: var(--fg);
+  opacity: 0.85;
+  text-transform: capitalize;
+  transition: opacity .2s ease;
+}
+.Nav_link__ssiPN:hover { opacity: 1; }
+
+@media (min-width: 768px) {
+  .Nav_nav__WsUm6 { display: flex; }
+}
+
+.Nav_burger__RPz_z {
+  width: 28px;
+  height: 2px;
+  background: var(--fg);
+  display: inline-block;
+  position: relative;
+}
+.Nav_burger__RPz_z::before, .Nav_burger__RPz_z::after {
+  content: "";
+  position: absolute;
+  left: 0; right: 0;
+  height: 2px;
+  background: var(--fg);
+}
+.Nav_burger__RPz_z::before { top: -8px; }
+.Nav_burger__RPz_z::after { top: 8px; }
+
+.Nav_open__YC4V4 {
+  display: grid;
+  position: absolute;
+  left: 0; right: 0; top: 56px;
+  background: rgba(11,18,32,0.95);
+  padding: 1rem;
+  border-bottom: 1px solid rgba(255,255,255,0.08);
+}
+
+/*!***************************************************************************************************************************************************************************************************************************************************************************!*\
+  !*** css ./node_modules/next/dist/build/webpack/loaders/css-loader/src/index.js??ruleSet[1].rules[14].oneOf[7].use[2]!./node_modules/next/dist/build/webpack/loaders/postcss-loader/src/index.js??ruleSet[1].rules[14].oneOf[7].use[3]!./src/styles/Portfolio.module.css ***!
+  \***************************************************************************************************************************************************************************************************************************************************************************/
+.Portfolio_tab__OaXgc {
+  padding: .4rem .9rem;
+  border-radius: 999px;
+  border: 1px solid rgba(255,255,255,.14);
+  background: rgba(255,255,255,.04);
+  transition: all .2s ease;
+  opacity: .8;
+  text-transform: none;
+}
+.Portfolio_tab__OaXgc:hover { opacity: 1; transform: translateY(-1px); }
+.Portfolio_active__RMhCw {
+  background: rgba(96,165,250,.15);
+  border-color: rgba(96,165,250,.5);
+  box-shadow: 0 0 0 3px rgba(96,165,250,.15);
+}
+

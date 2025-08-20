@@ -1,0 +1,31 @@
+.wrapper {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1.5rem;
+}
+.title {
+  font-size: clamp(2rem, 4vw, 3.5rem);
+  font-weight: 800;
+  line-height: 1.1;
+}
+.badge {
+  display: inline-flex;
+  gap: .5rem;
+  padding: .35rem .75rem;
+  border-radius: 999px;
+  border: 1px solid rgba(255,255,255,.15);
+  background: rgba(255,255,255,.05);
+}
+.actions { display: flex; gap: .75rem; flex-wrap: wrap; }
+
+@media (min-width: 900px) {
+  .wrapper {
+    grid-template-columns: 1.2fr .8fr;
+    align-items: center;
+  }
+}
+.avatar {
+  border-radius: 1rem;
+  border: 1px solid rgba(255,255,255,.15);
+  box-shadow: 0 10px 40px rgba(0,0,0,.35);
+}

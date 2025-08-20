@@ -1,0 +1,51 @@
+.header {
+  position: sticky;
+  top: 0;
+  z-index: 50;
+  backdrop-filter: saturate(180%) blur(10px);
+  background: rgba(11,18,32,0.6);
+  border-bottom: 1px solid rgba(255,255,255,0.08);
+  padding: 0.75rem 0;
+}
+
+.nav {
+  display: none;
+  gap: 1rem;
+}
+.link {
+  color: var(--fg);
+  opacity: 0.85;
+  text-transform: capitalize;
+  transition: opacity .2s ease;
+}
+.link:hover { opacity: 1; }
+
+@media (min-width: 768px) {
+  .nav { display: flex; }
+}
+
+.burger {
+  width: 28px;
+  height: 2px;
+  background: var(--fg);
+  display: inline-block;
+  position: relative;
+}
+.burger::before, .burger::after {
+  content: "";
+  position: absolute;
+  left: 0; right: 0;
+  height: 2px;
+  background: var(--fg);
+}
+.burger::before { top: -8px; }
+.burger::after { top: 8px; }
+
+.open {
+  display: grid;
+  position: absolute;
+  left: 0; right: 0; top: 56px;
+  background: rgba(11,18,32,0.95);
+  padding: 1rem;
+  border-bottom: 1px solid rgba(255,255,255,0.08);
+}
