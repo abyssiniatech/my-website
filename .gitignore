@@ -1,17 +1,25 @@
-# Node.js
-node_modules/
-npm-debug.log
+# Dependencies
+/node_modules
 
-# Build output
-dist/
-build/
+# Next.js build output
+/.next
+/out
 
-# Environment variables
-.env
-
-# OS files
-.DS_Store
-Thumbs.db
+# Production
+/build
 
 # Logs
-*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+
+# Local env files
+.env.local
+.env.development.local
+.env.test.local
+.env.production.local
+
+# Mac / Windows system files
+.DS_Store
+Thumbs.db
