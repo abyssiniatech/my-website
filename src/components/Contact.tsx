@@ -119,6 +119,7 @@ ${data.get("message")}`
                 whileInView={{ opacity: 1, x: 0 }}
                 viewport={{ once: true, amount: 0.3 }}
                 transition={{ delay: i * 0.12, duration: 0.45 }}
+                // @ts-expect-error: className is supported on motion.li
                 className="group flex items-center gap-3"
               >
                 <c.Icon

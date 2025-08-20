@@ -45,7 +45,7 @@ export default function Experience() {
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5, delay: i * 0.2 }}
             viewport={{ once: true }}
-            className="card"
+            {...{ className: "card" } as any}
           >
             <div className="flex items-center justify-between gap-4">
               <div className="font-semibold">
