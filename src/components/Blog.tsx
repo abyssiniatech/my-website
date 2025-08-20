@@ -1,5 +1,5 @@
-"use client";
 
+"use client";
 import { useState } from "react";
 import Image from "next/image";
 import { motion } from "framer-motion";
@@ -123,12 +123,11 @@ export default function Blog() {
         <div className="flex flex-wrap gap-2 mb-6">
           {categories.map((c) => (
             <button
+              type="button"
               key={c}
               onClick={() => setCategory(c)}
               className={`px-4 py-1 rounded-full text-sm font-medium ring-1 ring-transparent transition ${
-                c === category
-                  ? "bg-blue-600 text-white"
-                  : "bg-white/5 hover:bg-white/10"
+                c === category ? "bg-blue-600 text-white" : "bg-white/5 hover:bg-white/10"
               }`}
             >
               {c}
@@ -137,44 +136,51 @@ export default function Blog() {
         </div>
 
         {/* Blog Grid */}
-        <motion.div
-          className="grid md:grid-cols-2 lg:grid-cols-3 gap-6"
-          variants={containerVariants}
-          initial="hidden"
-          whileInView="show"
-          viewport={{ once: true, amount: 0.15 }}
-        >
-          {filtered.map((b, idx) => (
-            <motion.a
-              key={`${b.title}-${idx}`}
-              href={b.link ?? "#"}
-              target={b.link ? "_blank" : undefined}
-              rel={b.link ? "noopener noreferrer" : undefined}
-              className="block bg-white dark:bg-gray-800 rounded-lg overflow-hidden shadow-sm hover:shadow-md transition transform hover:-translate-y-1"
-              variants={cardVariants}
-            >
-              {/* Image */}
-              <div className="relative w-full aspect-video bg-gray-100 dark:bg-gray-700">
-                <Image
-                  src={b.image}
-                  alt={b.title}
-                  fill
-                  sizes="(max-width: 768px) 100vw, 33vw"
-                  className="object-cover"
-                  priority={false}
-                />
-              </div>
+        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+          <motion.div
+            style={{ display: "contents" }}
+            variants={containerVariants}
+            initial="hidden"
+            whileInView="show"
+            viewport={{ once: true, amount: 0.15 }}
+          >
+            {filtered.map((b, idx) => (
+              <motion.div
+                key={`${b.title}-${idx}`}
+                variants={cardVariants}
+                {...{ className: "block bg-white dark:bg-gray-800 rounded-lg overflow-hidden shadow-sm hover:shadow-md transition transform hover:-translate-y-1" }}
+              >
+                <a
+                  href={b.link ?? "#"}
+                  target={b.link ? "_blank" : undefined}
+                  rel={b.link ? "noopener noreferrer" : undefined}
+                  className="contents"
+                >
+                  {/* Image */}
+                  <div className="relative w-full aspect-video bg-gray-100 dark:bg-gray-700">
+                    <Image
+                      src={b.image}
+                      alt={b.title}
+                      fill
+                      sizes="(max-width: 768px) 100vw, 33vw"
+                      className="object-cover"
+                      priority={false}
+                    />
+                  </div>
 
-              {/* Content */}
-              <div className="p-4">
-                <h3 className="font-semibold text-lg">{b.title}</h3>
-                <p className="text-sm text-gray-600 dark:text-gray-300 mt-1">{b.excerpt}</p>
-                <div className="mt-3 text-xs text-gray-500">{b.category}</div>
-              </div>
-            </motion.a>
-          ))}
-        </motion.div>
+                  {/* Content */}
+                  <div className="p-4">
+                    <h3 className="font-semibold text-lg">{b.title}</h3>
+                    <p className="text-sm text-gray-600 dark:text-gray-300 mt-1">{b.excerpt}</p>
+                    <div className="mt-3 text-xs text-gray-500">{b.category}</div>
+                  </div>
+                </a>
+              </motion.div>
+            ))}
+          </motion.div>
+        </div>
       </div>
     </section>
   );
 }
+
