@@ -9,7 +9,9 @@ import Testimonials from "@/components/Testimonials";
 import Contact from "@/components/Contact";
 import Footer from "@/components/Footer";
 import Resume from "@/components/Resume";
-  
+  import Statistics  from "@/components/Statistics";
+import Hobbies from "@/components/Hobbies";
+
 
 export default function Page() {
   return (
@@ -17,11 +19,13 @@ export default function Page() {
       <Nav />
       <Hero />
       <About />
+      <Statistics /> 
       <Skills />
       <Portfolio />
       <Blog />
       <Experience />
       <Testimonials />
+       <Hobbies /> 
       <Contact />
      <Resume />
       <Footer />

@@ -72,7 +72,7 @@ export default function Nav() {
             <Github />
           </a>
           <a
-            href="https://www.linkedin.com/in/surafel-mengist"
+            href="https://www.linkedin.com/in/surafel-mengist-3a254b261"
             target="_blank"
             aria-label="LinkedIn"
             className="hover:text-blue-500 transition-colors"
