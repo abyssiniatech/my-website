@@ -28,8 +28,8 @@ const contacts: ContactItem[] = [
   {
     Icon: FaLinkedin,
     label: "LinkedIn",
-    href: "https://www.linkedin.com/in/surafel-mengist",
-    text: "linkedin.com/in/surafel-mengist",
+    href: "https://www.linkedin.com/in/surafel-mengist-3a254b261",
+    text: "linkedin.com/in/surafel-mengist-3a254b261",
     iconClass: "text-blue-600",
     external: true,
   },
