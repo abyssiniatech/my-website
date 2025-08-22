@@ -21,6 +21,36 @@ export default function Footer() {
           {/* Or use emoji instead: <span className="text-lg">⬆️</span> */}
         </a>
       </div>
+
+      {/* Fork and Starter Project Buttons */}
+      <div className="absolute left-8 bottom-6 flex gap-3">
+        {/* Fork Button */}
+        <a
+          href="https://github.com/abyssiniatech/my-website.git/fork"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="
+            flex items-center gap-2 px-4 py-2 rounded-lg bg-slate-900 text-white
+            hover:bg-slate-700 transition shadow-md text-sm font-semibold
+          "
+          aria-label="Fork this project"
+        >
+          <span role="img" aria-label="Fork">🍴</span> Fork
+        </a>
+        {/* Starter Project Button */}
+        <a
+          href="https://github.com/abyssiniatech/my-website.git"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="
+            flex items-center gap-2 px-4 py-2 rounded-lg bg-green-600 text-white
+            hover:bg-green-500 transition shadow-md text-sm font-semibold
+          "
+          aria-label="Starter project"
+        >
+          <span role="img" aria-label="Start">🚀</span> Starter Project
+        </a>
+      </div>
     </footer>
   );
 }
