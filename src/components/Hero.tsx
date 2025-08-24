@@ -22,7 +22,7 @@ export default function Hero() {
           </div>
         </div>
         <div className="justify-self-center">
-          <Image src="/profile.jpg" width={420} height={520} alt="Surafel portrait" className={styles.avatar} priority />
+          <Image src="/profile.png" width={420} height={520} alt="Surafel portrait" className={styles.avatar} priority />
         </div>
       </div>
     </MotionSection>

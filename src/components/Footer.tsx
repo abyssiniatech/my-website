@@ -1,7 +1,6 @@
 
-
 "use client";
-import { ArrowUp } from "lucide-react"; // you can use emoji instead if you prefer
+import { ArrowUp } from "lucide-react";
 import Link from "next/link";
 
 export default function Footer() {
@@ -19,37 +18,52 @@ export default function Footer() {
           className="flex items-center justify-center w-10 h-10 rounded-full bg-blue-600 text-white hover:bg-blue-700 transition shadow-md"
         >
           <ArrowUp className="w-5 h-5" />
-          {/* Or use emoji instead: <span className="text-lg">⬆️</span> */}
         </a>
+
+        {/* Fork & Starter Project Buttons - visible only on small screens */}
+        <div className="flex gap-3 md:hidden">
+          <a
+            href="https://github.com/abyssiniatech/my-website/fork"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="flex items-center gap-2 px-4 py-2 rounded-lg bg-slate-900 text-white hover:bg-slate-700 transition shadow-md text-sm font-semibold"
+            aria-label="Fork this project"
+          >
+            <span role="img" aria-label="Fork">🍴</span> Fork
+          </a>
+
+          <a
+            href="https://github.com/abyssiniatech/my-website"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="flex items-center gap-2 px-4 py-2 rounded-lg bg-green-600 text-white hover:bg-green-500 transition shadow-md text-sm font-semibold"
+            aria-label="Starter project"
+          >
+            <span role="img" aria-label="Start">⚡</span> Starter Project
+          </a>
+        </div>
       </div>
 
-      {/* Fork and Starter Project Buttons */}
-      <div className="absolute left-8 bottom-6 flex gap-3">
-        {/* Fork Button */}
+      {/* Fork & Starter Project Buttons - fixed bottom-left (desktop only) */}
+      <div className="hidden md:flex absolute left-8 bottom-6 gap-3">
         <a
           href="https://github.com/abyssiniatech/my-website/fork"
           target="_blank"
           rel="noopener noreferrer"
-          className="
-            flex items-center gap-2 px-4 py-2 rounded-lg bg-slate-900 text-white
-            hover:bg-slate-700 transition shadow-md text-sm font-semibold
-          "
+          className="flex items-center gap-2 px-4 py-2 rounded-lg bg-slate-900 text-white hover:bg-slate-700 transition shadow-md text-sm font-semibold"
           aria-label="Fork this project"
         >
           <span role="img" aria-label="Fork">🍴</span> Fork
         </a>
-        {/* Starter Project Button */}
+
         <a
           href="https://github.com/abyssiniatech/my-website"
           target="_blank"
           rel="noopener noreferrer"
-          className="
-            flex items-center gap-2 px-4 py-2 rounded-lg bg-green-600 text-white
-            hover:bg-green-500 transition shadow-md text-sm font-semibold
-          "
+          className="flex items-center gap-2 px-4 py-2 rounded-lg bg-green-600 text-white hover:bg-green-500 transition shadow-md text-sm font-semibold"
           aria-label="Starter project"
         >
-          <span role="img" aria-label="Start"> ⚡</span> Starter Project
+          <span role="img" aria-label="Start">⚡</span> Starter Project
         </a>
       </div>
     </footer>
